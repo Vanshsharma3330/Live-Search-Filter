@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script
+			src="https://kit.fontawesome.com/e8fa2e31b4.js"
+			crossorigin="anonymous"
+			defer
+		></script>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<div
+			class="container d-flex align-items-center justify-content-between"
+		>
+			<div
+				class="sidebar border rounded p-3 h-20 shadow-sm d-flex flex-column justify-content-between mt-5 bg-white"
+			>
+				<div class="sidebody vh-69 mt-1">
+					
+					<div
+						class=""
+					>
+						<div class="input-group shadow-sm rounded-lg">
+							<input
+								placeholder="Search..."
+								id="searchBar"
+								name="searchBar"
+								type="search"
+								aria-describedby="button-addon1"
+								class="form-control search border-0 bg-light bg-white text-dark font-weight-500 rounded-pill p-2"
+							/>
+							<div class="input-group-append">
+								<button
+									id="button-addon1"
+									type="submit"
+									class="btn btn-link text-primary"
+								>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</button>
+							</div>
+						</div>
+
+						
+						<div
+							class="form-group mt-4 d-flex justify-content-center"
+						>
+							<h5 for="priceRange" class="mt-2">Price:</h5>
+							<div class="d-flex align-items-center">
+								<input
+									style="margin-left: 10px"
+									type="range"
+									class="form-range"
+									id="priceRange"
+									name="priceRange"
+									min="0"
+									max="200"
+									step="1"
+									value="0"
+								/>
+								<span id="rangeValue" class="ml-2 text-nowrap">$0.00</span>
+							</div>
+						</div>
+
+						<h2 class="mt-4 text-xs">Filters</h2>
+						<div class="Filters ml-4">
+							
+							<div class="form-group">
+								<label for="ratingFilter" class="mt-2"
+									>Filter by Rating:</label
+								>
+								<select id="ratingFilter" class="form-control mt-2">
+									<option value="0">All Ratings</option>
+									<option value="4">4 Stars & Above</option>
+									<option value="3">3 Stars & Above</option>
+									<option value="2">2 Stars & Above</option>
+									<option value="1">1 Star & Above</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<label for="colorFilter" class="mt-2"
+									>Filter by Color:</label
+								>
+								<select id="colorFilter" class="form-control mt-2">
+									<option value="all">All Colors</option>
+									<option value="Green">Green</option>
+									<option value="White">White</option>
+									<option value="Black">Black</option>
+									<option value="Blue">Blue</option>
+									<option value="Tan">Tan</option>
+									<option value="Navy">Navy</option>
+								</select>
+							</div>
+
+							<div class="form-group mt-2">
+								<label for="brandFilter"
+									>Filter by Brand:</label
+								>
+								<select id="brandFilter" class="form-control mt-2">
+									<option value="all">All Brands</option>
+									<option value="Fjallraven">
+										Fjallraven
+									</option>
+									<option value="Slim Fit">Slim Fit</option>
+									<option value="Cotton Jacket">
+										Cotton Jacket
+									</option>
+									<option value="Hafeez Center">
+										Hafeez Center
+									</option>
+									<option value="BIUMJ">BIUMJ</option>
+									<option value="Pierced Owl">
+										Pierced Owl
+									</option>
+									<option value="WD">WD</option>
+									<option value="SanDisk">SanDisk</option>
+									<option value="Silicon Power">
+										Silicon Power
+									</option>
+									<option value="Acer">Acer</option>
+									<option value="BIYLACLESEN">
+										BIYLACLESEN
+									</option>
+									<option value="Apple">Apple</option>
+									<option value="Samsung">Samsung</option>
+									<option value="OPPO">OPPO</option>
+									<option value="Huawei">Huawei</option>
+								</select>
+							</div>
+
+							<div class="form-group mt-2">
+								<label for="categoryFilter"
+									>Filter by Category:</label
+								>
+								<select
+									id="categoryFilter"
+									class="form-control mt-2"
+								>
+									<option value="all">All Categories</option>
+									<option value="men's clothing">
+										Men's Clothing
+									</option>
+									<option value="women's clothing">
+										Women's Clothing
+									</option>
+									<option value="electronics">
+										Electronics
+									</option>
+									<option value="jewelery">Jewelry</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<button id="removeFiltersBtn" class="btn btn-danger mt-4">
+						Remove Filters
+					</button>
+				</div>
+
+				
+				<div class="sidefoot">
+					<hr style="margin: 15px 0; border: 1px solid #eee" />
+					<h2
+						class="resultcount text-primary text-decoration-underline fs-5"
+					></h2>
+				</div>
+			</div>
+			<div class="data">
+				<div
+					class="header rounded bg-dark text-white py-3 mb-4 d-flex align-items-center justify-content-center"
+				>
+					<p font-weight-bold text-white display-10>
+						LIVE SEARCH FILTER
+					</p>
+				</div>
+				<div class="body">
+					<div id="root" class="w-100"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js.js"></script>
+	</body>
+</html>
